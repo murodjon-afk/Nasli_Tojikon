@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(15deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+.animate-floatSlow {
+  animation: floatSlow 12s ease-in-out infinite;
+}
+
+@keyframes floatSlow2 {
+  0%, 100% { transform: translateY(0) rotate(-10deg); }
+  50% { transform: translateY(15px) rotate(-6deg); }
+}
+.animate-floatSlow2 {
+  animation: floatSlow2 14s ease-in-out infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-rotateSlow {
+  animation: rotateSlow 60s linear infinite;
+}
