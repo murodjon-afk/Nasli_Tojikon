@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Categories() {
@@ -7,14 +8,19 @@ export default function Categories() {
 Категории</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl auto-rows-[200px] sm:auto-rows-[260px] lg:auto-rows-[320px]">
-  <div className="relative group rounded-2xl overflow-hidden cursor-pointer sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2 transition-all duration-500">
-    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
-    <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
-      <Image src="/historical.jpg" alt="Как читать архитектуру" fill priority className="object-cover" />
-    </div>
-    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
-    <h2 className="absolute bottom-4 left-4 text-white text-2xl sm:text-3xl font-bold drop-shadow-lg">Как читать архитектуру</h2>
-  </div>
+   <Link
+          href="/architecture"
+          className="relative group rounded-2xl overflow-hidden cursor-pointer sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2 transition-all duration-500"
+        >
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
+          <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
+            <Image src="/historical.jpg" alt="Как читать архитектуру" fill priority className="object-cover" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
+          <h2 className="absolute bottom-4 left-4 text-white text-2xl sm:text-3xl font-bold drop-shadow-lg">
+            Как читать архитектуру
+          </h2>
+        </Link>
 
   <div className="relative group rounded-2xl overflow-hidden cursor-pointer transition-all duration-500">
     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
