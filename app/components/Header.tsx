@@ -2,21 +2,25 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
+import Image from 'next/image';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="w-full fixed top-0 left-0 bg-black/30 backdrop-blur-md text-white z-50 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Лого */}
-        <Link
+       <Link
       href="/"
       className="flex items-center gap-1 text-2xl font-bold tracking-wide hover:scale-105 transition-transform duration-300"
     >
+      <Image
+        src="/logo.png" // картинка в папке public
+        alt="Логотип"
+        width={50} // обязательно число
+        height={50} // обязательно число
+      />
       <h1>
-        <span className="text-yellow-400">Nasli</span>{" "}
-        <span className="text-white">Tojikon</span>
+        <span className="text-white">Darvesh</span>
       </h1>
     </Link>
         {/* Десктоп меню */}
@@ -84,7 +88,7 @@ export default function Header() {
         Музыка
       </Link>
       <Link
-        href="/"
+        href="/history"
         onClick={() => setMenuOpen(false)}
         className="hover:text-yellow-400 transition-colors"
       >

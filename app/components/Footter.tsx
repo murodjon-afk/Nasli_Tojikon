@@ -1,5 +1,6 @@
 'use client';
-
+import Link from "next/link"; 
+import Image from 'next/image';
 export default function Footer() {
   return (
     <footer
@@ -16,8 +17,14 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left space-y-2">
-          <h2 className="text-3xl font-bold tracking-wide drop-shadow-[0_0_10px_rgba(255,215,0,0.4)]">
-            <span className="text-yellow-400">Nasli</span> Tojikon
+          <h2 className="text-3xl font-bold tracking-wide drop-shadow-[0_0_10px_rgba(255,215,0,0.4)] flex items-center gap-[10px]">
+             <Image
+                    src="/logo.png" // картинка в папке public
+                    alt="Логотип"
+                    width={50} // обязательно число
+                    height={50} // обязательно число
+                  />
+            <span className="text-yellow-400">Darvesh</span> 
           </h2>
           <p className="text-sm text-white max-w-xs leading-relaxed">
             Платформа, посвящённая сохранению и популяризации культуры таджикского народа —
@@ -25,13 +32,20 @@ export default function Footer() {
           </p>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          <a href="#" className="hover:text-yellow-400 transition-colors">Музыка</a>
-          <a href="#" className="hover:text-yellow-400 transition-colors">История</a>
-          <a href="#" className="hover:text-yellow-400 transition-colors">Архитектура</a>
-          <a href="#" className="hover:text-yellow-400 transition-colors">Литература</a>
-        </nav>
-
+      <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
+      <Link href="/music" className="hover:text-yellow-400 transition-colors">
+        Музыка
+      </Link>
+      <Link href="/history" className="hover:text-yellow-400 transition-colors">
+        История
+      </Link>
+      <Link href="/architecture" className="hover:text-yellow-400 transition-colors">
+        Архитектура
+      </Link>
+      <Link href="/literature" className="hover:text-yellow-400 transition-colors">
+        Литература
+      </Link>
+    </nav>
         <div className="flex justify-center md:justify-end gap-5">
           <a
             href="https://www.instagram.com/kulturatajikistana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -97,7 +111,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 mt-8 text-center text-white text-xs border-t border-white/20 pt-4">
-        © 2025 <span className="text-yellow-400">Nasli Tojikon</span> — Все права защищены.
+        © 2025 <span className="text-yellow-400">Darvesh</span> — Все права защищены.
         <br className="sm:hidden" />
         <span className="text-white">
           Сделано чтобы улучшить культурное наследия таджиков
@@ -106,3 +120,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
